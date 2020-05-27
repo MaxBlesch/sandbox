@@ -1,0 +1,7 @@
+[submodule "submodules/robupy"]
+	path = submodules/robupy
+	url = https://github.com/OpenSourceEconomics/robupy.git
+[submodule "submodules/respy"]
+	path = submodules/respy
+	url = https://github.com/structRobustness/respy.git
+	branch = adding_robustness_rafaelsuchy 
