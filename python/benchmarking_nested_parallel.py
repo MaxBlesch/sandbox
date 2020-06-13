@@ -44,25 +44,22 @@ if __name__ == "__main__":
     period_draws_emax_risk = np.loadtxt("kw_one_period_draws_emax_risk.txt")
     delta = 0.95
 
-    parralel_range_test(
-        wages, nonpecs, continuation_values, period_draws_emax_risk, delta
-    )
-    parralel_range_test.parallel_diagnostics(level=4)
-    # num_runs = 10
-    # run_times = [0.1] * num_runs
-    #
-    # for j in range(10):
-    #     start = datetime.datetime.now()
-    #     calc = parralel_range_test(
-    #         wages, nonpecs, continuation_values, period_draws_emax_risk, delta
-    #     )
-    #     end = datetime.datetime.now()
-    #     time_delta = end - start
-    #     run_times[j] = (
-    #         time_delta.microseconds
-    #         + time_delta.seconds * 1000000
-    #     )
-    #     print(j)
-    #
-    # result_array = np.array(run_times[1:])
-    # np.savetxt(f"times_parr_jit.txt", result_array)
+    # parralel_range_test(
+    #     wages, nonpecs, continuation_values, period_draws_emax_risk, delta
+    # )
+    # parralel_range_test.parallel_diagnostics(level=4)
+    num_runs = 10
+    run_times = [0.1] * num_runs
+
+    for j in range(10):
+        start = datetime.datetime.now()
+        calc = parralel_range_test(
+            wages, nonpecs, continuation_values, period_draws_emax_risk, delta
+        )
+        end = datetime.datetime.now()
+        time_delta = end - start
+        run_times[j] = time_delta.microseconds + time_delta.seconds * 1000000
+        print(j)
+
+    result_array = np.array(run_times[1:])
+    np.savetxt(f"times_parr_jit.txt", result_array)
