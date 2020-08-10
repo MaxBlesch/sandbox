@@ -1,0 +1,14 @@
+__pycache__
+.idea/
+*.png
+.idea/*
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+.ipynb*
+
+configurations/ipython/profile_default/history.sqlite
+configurations/jupyter/migrated
+
