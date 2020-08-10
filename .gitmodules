@@ -1,3 +1,7 @@
 [submodule "submodules/robupy"]
 	path = submodules/robupy
 	url = https://github.com/OpenSourceEconomics/robupy.git
+[submodule "submodules/respy"]
+	path = submodules/respy
+	url = https://github.com/OpenSourceEconomics/respy.git
+	branch = fasttrack_probs
